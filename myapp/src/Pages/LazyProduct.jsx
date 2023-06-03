@@ -10,8 +10,6 @@ const LazyProduct = () => {
   const [TotalPage, setTotalPage] = useState(null);
   const [loading, setloading] = useState(true);
 
-  console.log(Searchvalue);
-
   useEffect(() => {
     getTotalPage();
     getData();
@@ -23,7 +21,6 @@ const LazyProduct = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  console.log("page", PageNo);
   const getTotalPage = async () => {
     try {
       let response = await fetch(
@@ -60,14 +57,6 @@ const LazyProduct = () => {
     const TotalwindowHeight = document.documentElement.scrollHeight;
     const CurrentDisplayedHeight = window.innerHeight;
     const ScrollBarScrolledHeight = document.documentElement.scrollTop;
-    console.log(
-      "TotalwindowHeight",
-      TotalwindowHeight,
-      "CurrentDisplayedHeight",
-      CurrentDisplayedHeight,
-      "ScrollBarScrolledHeight",
-      ScrollBarScrolledHeight
-    );
 
     if (PageNo > TotalPage) {
       return;
