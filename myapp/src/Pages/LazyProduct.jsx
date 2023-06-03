@@ -58,12 +58,20 @@ const LazyProduct = () => {
     const CurrentDisplayedHeight = window.innerHeight;
     const ScrollBarScrolledHeight = document.documentElement.scrollTop;
 
+    console.log("one", ScrollBarScrolledHeight + CurrentDisplayedHeight);
+    console.log("two", TotalwindowHeight);
+    console.log(
+      ScrollBarScrolledHeight + CurrentDisplayedHeight >= TotalwindowHeight &&
+        ScrollBarScrolledHeight !== 0
+    );
     if (PageNo > TotalPage) {
-      return;
-    } else if (
+    }
+    if (
       ScrollBarScrolledHeight + CurrentDisplayedHeight >= TotalwindowHeight &&
       ScrollBarScrolledHeight !== 0
     ) {
+      console.log("Touched");
+      console.log(PageNo);
       setPageNo((prev) => prev + 1);
     }
   };

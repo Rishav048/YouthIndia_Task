@@ -12,7 +12,6 @@ const ButtonStyle = {
   color: "black",
   letterSpacing: "1px",
   cursor: "pointer",
-
   background:
     "linear-gradient(90deg, rgba(255,159,55,1) 35%, rgba(251,69,204,0.9612219887955182) 75%)",
   boxShadow:

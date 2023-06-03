@@ -12,8 +12,6 @@ const Product = () => {
   const [Searchvalue, setSearchvalue] = useState("Batman");
   const [Loading, setLoading] = useState(true);
 
-  console.log(Searchvalue);
-
   useEffect(() => {
     getTotalPage();
     getData();
@@ -41,7 +39,7 @@ const Product = () => {
         `http://www.omdbapi.com/?i=tt3896198&apikey=9823255c&s=${Searchvalue}&page=${PageNo}`
       );
       let data = await response.json();
-      console.log("data", data);
+
       if (data) {
         setProducts(data.Search);
       }
