@@ -15,7 +15,7 @@ const LazyProduct = () => {
   useEffect(() => {
     getTotalPage();
     getData();
-  }, [Searchvalue, PageNo]);
+  }, [Products, Searchvalue, PageNo]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
