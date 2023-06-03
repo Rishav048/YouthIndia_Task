@@ -64,14 +64,11 @@ const LazyProduct = () => {
       ScrollBarScrolledHeight + CurrentDisplayedHeight >= TotalwindowHeight &&
         ScrollBarScrolledHeight !== 0
     );
-    if (PageNo > TotalPage) {
-    }
+
     if (
       ScrollBarScrolledHeight + CurrentDisplayedHeight >= TotalwindowHeight &&
       ScrollBarScrolledHeight !== 0
     ) {
-      console.log("Touched");
-      console.log(PageNo);
       setPageNo((prev) => prev + 1);
     }
   };
@@ -93,7 +90,10 @@ const LazyProduct = () => {
         type="text"
         placeholder="Search by Name"
         value={Searchvalue}
-        onChange={(e) => setSearchvalue(e.target.value)}
+        onChange={(e) => {
+          setProducts([]);
+          setSearchvalue(e.target.value);
+        }}
       />
       <div className={style.container}>
         {Products && Products.map((el, i) => <ProductCard key={i} {...el} />)}
