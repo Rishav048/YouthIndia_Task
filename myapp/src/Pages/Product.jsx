@@ -17,7 +17,7 @@ const Product = () => {
   useEffect(() => {
     getTotalPage();
     getData();
-  }, [Products, PageNo, Searchvalue]);
+  }, [PageNo, Searchvalue]);
 
   const getTotalPage = async () => {
     try {
