@@ -1,0 +1,26 @@
+.container {
+  overflow: auto;
+  padding: 25px 30px 25px 20px;
+  border: 0px solid rgb(226, 66, 66);
+  background-color: rgb(239, 244, 248);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  row-gap: 8vh;
+  column-gap: 20vh;
+}
+
+input {
+  display: block;
+  margin: auto;
+  border-radius: 15px;
+  width: 20%;
+  text-align: center;
+  height: 25px;
+  border: 1px solid blue;
+  font-size: 16px;
+  color: rgb(15, 14, 14);
+  margin-bottom: 3vh;
+  margin-top: 5vh;
+}

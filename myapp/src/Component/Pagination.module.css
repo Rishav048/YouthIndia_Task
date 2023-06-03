@@ -1,0 +1,20 @@
+.btn {
+  width: 150px;
+  height: 30px;
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    rgb(253, 170, 81) 35%,
+    rgba(243, 119, 212, 0.961) 75%
+  );
+  color: rgb(15, 15, 15);
+}
+
+.btn:hover {
+  width: 160px;
+  height: 35px;
+  font-size: 20px;
+  cursor: pointer;
+}
